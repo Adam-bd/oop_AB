@@ -6,11 +6,16 @@ public class Main {
         Point p1 = new Point();
         p1.setX(5);
         p1.setY(6);
-        System.out.println(p1.toSvg());
 
-        Point p2 = new Point(7, 8);
-        System.out.println(p1.toSvg());
-        System.out.println();
-        System.out.println(p2.toSvg());
+        Point p2 = new Point(7,8);
+
+        Segment s = new Segment(p1,p2);
+        Segment s2 = new Segment(p1,p2);
+        p1.setX(15);
+        p1.setY(12);
+        p2.setX(15);
+        p2.setY(8);
+
+
     }
 }
