@@ -1,33 +1,42 @@
-import java.util.ArrayList;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) {
 
-        Point p1 = new Point();
-        p1.setX(5);
-        p1.setY(6);
+    public static void main(String args[]){
+        //System.out.println("Witaj Świecie!");
+        // Tworzenie obiektu Point i ustawienie współrzędnych
+        Point point = new Point(3.5, 7.2);
 
-        Point p2 = new Point(7,8);
+        // Wyświetlenie informacji o punkcie
+        System.out.println(point);
+        System.out.println(point.toSvg());
+        point.translate(2,1);
+        System.out.println("After translate: " + point);
+        Point newPoint = point.translated(3,0);
+        System.out.println("point after translated: " + point);
+        System.out.println("newPoint after translated: " + newPoint);
+        //wywołanie łańcuchowe metod
+        System.out.println(point.translated(1,1).toSvg());
 
-        Point p3 = new Point(p1);
-        Point p4 = new Point(p2);
+        // Tworzenie i testowanie odcinka
+        Segment segment = new Segment(point, newPoint);
+        System.out.println(segment.toString());
+        System.out.println("Segment length: " + segment.length());
+        point.translate(-2,0);
+        System.out.println("Segment length after change point: " + segment.length());
 
-        Segment s1 = new Segment(p1,p2);
-        Segment s2 = new Segment(p3,p4);
-        p1.setX(15);
-        p1.setY(12);
-        p2.setX(15);
-        p2.setY(8);
+        // Tworzenie obiektów Point
+        Point point1 = new Point(3.5, 7.2);
+        Point point2 = new Point(5.0, 10.0);
+        Point point3 = new Point(1.0, 1.0);
 
-        ArrayList<Point> points = new ArrayList<>();
-        points.add(new Point(90,70));
-        points.add(new Point(80,70));
-        points.add(new Point(70,70));
-        points.add(new Point(60,70));
-        points.add(new Point(50,70));
-        Polygon poly = new Polygon(points);
+        // Tworzenie tablicy Segmentów
+        Segment[] segments = {
+                new Segment(point1, point2),
+                new Segment(point2, point3),
+                new Segment(point1, point3)
+        };
 
+        // Znajdowanie i wyświetlanie najdłuższego segmentu
+        Segment longest = Segment.findLongestSegment(segments);
+        System.out.println("Longest segment length: " + longest.length());
     }
 }
