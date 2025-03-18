@@ -44,7 +44,7 @@ public class Polygon extends Shape{
         return sb.toString();
     }
 
-    // Metoda toString() zwracająca informacje o punktach wielokątu
+    //  Metoda toString() zwracająca informacje o punktach wielokątu
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Polygon: [");

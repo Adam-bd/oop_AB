@@ -75,7 +75,7 @@ public class Segment {
         double x2_intersect = point.getX() - deltaX;
         double y2_intersect = point.getY() - deltaY;
 
-        // Zwrócenie dwóch segmentów
+        //  Zwrócenie dwóch segmentów
         return new Segment[]{
                 new Segment(point, new Point(x1_intersect, y1_intersect)),
                 new Segment(point, new Point(x2_intersect, y2_intersect))

@@ -35,7 +35,7 @@ public class Main {
                 new Segment(point1, point3)
         };
 
-        // Znajdowanie i wyświetlanie najdłuższego segmentu
+        //  Znajdowanie i wyświetlanie najdłuższego segmentu
         Segment longest = Segment.findLongestSegment(segments);
         System.out.println("Longest segment length: " + longest.length());
 

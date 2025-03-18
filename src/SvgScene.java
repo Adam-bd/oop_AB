@@ -49,7 +49,7 @@ public class SvgScene {
     }
 
 
-    // Przykładowa metoda main do testowania
+    //  Przykładowa metoda main do testowania
     public static void main(String[] args) {
         Point[] points1 = {new Point(0, 0), new Point(10, 0), new Point(10, 10), new Point(0, 10)};
         Point[] points2 = {new Point(20, 20), new Point(30, 20), new Point(30, 30), new Point(20, 30)};

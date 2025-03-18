@@ -99,7 +99,7 @@ public class Point {
 
     /// /    // Metoda główna do testowania klasy
     /// /    public static void main(String[] args) {
-    /// /        // Tworzenie obiektu Point i ustawienie współrzędnych
+    /// /       // Tworzenie obiektu Point i ustawienie współrzędnych
     /// /        Point point = new Point(3.5, 7.2);
     /// /
     /// /        // Wyświetlenie informacji o punkcie
